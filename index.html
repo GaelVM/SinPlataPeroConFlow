@@ -1,190 +1,735 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>SIN PLATA PERO CON FLOW</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fuente -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<title>SIN PLATA PERO CON FLOW | Club de Motociclistas</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #050505, #081426);
-      color: white;
-      overflow-x: hidden;
-    }
+<meta name="description" content="Club de motociclistas SIN PLATA PERO CON FLOW. Aventuras, rutas, hermandad y pasión por las motos.">
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-    }
+<link rel="stylesheet" href="style.css">
 
-    .content {
-      position: relative;
-      z-index: 2;
-      padding: 20px;
-    }
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
 
-    h1 {
-      font-size: 55px;
-      color: #D4AF37;
-      text-shadow: 0 0 20px #D4AF37;
-      margin: 0;
-    }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    p {
-      margin-top: 20px;
-      color: #ccc;
-    }
-
-    .buttons {
-      margin-top: 30px;
-    }
-
-    .btn {
-      padding: 12px 25px;
-      margin: 5px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .btn-gold {
-      background: #D4AF37;
-      color: black;
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid white;
-      color: white;
-    }
-
-    .btn:hover {
-      transform: scale(1.1);
-      transition: 0.3s;
-    }
-
-    /* SECCIONES */
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
-      margin: 10px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-      display: inline-block;
-      width: 250px;
-    }
-
-    /* ANIMACIÓN SCROLL */
-    .fade {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 0.8s;
-    }
-
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="overlay"></div>
+<!-- LOADER -->
 
-    <div class="content">
-      <h1>SIN PLATA<br>PERO CON FLOW</h1>
+<div id="loader">
 
-      <p>
-        No medimos la riqueza por el dinero.<br>
-        La medimos por rutas, historias y hermandad.
-      </p>
+<div class="loader-logo">
+SPCF
+</div>
 
-      <div class="buttons">
-        <button class="btn btn-gold">ÚNETE</button>
-        <button class="btn btn-outline">EXPLORAR</button>
-      </div>
-    </div>
-  </div>
+<div class="loader-line"></div>
 
+</div>
 
-  <!-- STATS -->
-  <section>
-    <h2 class="fade">Nuestra Hermandad</h2>
+<!-- PARTICLES -->
 
-    <div class="card fade">
-      <h3>150+</h3>
-      <p>Miembros</p>
-    </div>
+<div id="particles"></div>
 
-    <div class="card fade">
-      <h3>80,000</h3>
-      <p>Kilómetros</p>
-    </div>
+<!-- NAVBAR -->
 
-    <div class="card fade">
-      <h3>35</h3>
-      <p>Eventos</p>
-    </div>
-  </section>
+<nav id="navbar">
 
+<div class="logo">
+SIN PLATA <span>PERO CON FLOW</span>
+</div>
 
-  <!-- FRASE -->
-  <section>
-    <h2 id="frase"></h2>
-  </section>
+<ul>
 
-  <script>
-    // FRASES DINÁMICAS
-    const frases = [
-      "El camino no pregunta cuánto tienes.",
-      "Sin plata, pero con flow.",
-      "Rodamos juntos, llegamos juntos."
-    ];
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#pilotos">Pilotos</a></li>
+<li><a href="#copilotos">Copilotos</a></li>
+<li><a href="#rutas">Rutas</a></li>
+<li><a href="#mapa">Mapa Biker</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#eventos">Eventos</a></li>
+<li><a href="#tienda">Tienda</a></li>
+<li><a href="#contacto">Contacto</a></li>
 
-    document.getElementById("frase").innerText =
-      frases[Math.floor(Math.random() * frases.length)];
+</ul>
 
-    // ANIMACIÓN SCROLL
-    const elementos = document.querySelectorAll(".fade");
+<div class="menu-mobile">
+<i class="fa-solid fa-bars"></i>
+</div>
 
-    function mostrar() {
-      elementos.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-          el.classList.add("show");
-        }
-      });
-    }
+</nav>
 
-    window.addEventListener("scroll", mostrar);
-    mostrar();
-  </script>
+<!-- HERO -->
+
+<header id="inicio" class="hero">
+
+<div class="hero-overlay"></div>
+
+<video autoplay muted loop playsinline>
+
+<source src="https://cdn.coverr.co/videos/coverr-motorcycle-rider-1561552637364?download=1080p" type="video/mp4">
+
+</video>
+
+<div class="hero-content">
+
+<div class="hero-logo">
+
+🏍️
+
+</div>
+
+<h1>
+SIN PLATA
+<span>PERO CON FLOW</span>
+</h1>
+
+<p>
+"No importa cuánto tengas.
+Importa cuánto disfrutas el camino."
+</p>
+
+<a href="#contacto" class="btn-hero">
+
+ÚNETE A LA RUTA
+
+</a>
+
+</div>
+
+<div class="speed-lines"></div>
+
+</header>
+
+<!-- NOSOTROS -->
+
+<section id="nosotros" class="section">
+
+<div class="section-title">
+<h2>Nuestra Hermandad</h2>
+</div>
+
+<div class="about-grid">
+
+<div class="glass-card">
+
+<i class="fa-solid fa-road"></i>
+
+<h3>Historia</h3>
+
+<p>
+Nacimos con una sola misión:
+demostrar que las mejores aventuras
+no dependen del dinero sino de la pasión.
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<i class="fa-solid fa-bullseye"></i>
+
+<h3>Misión</h3>
+
+<p>
+Crear experiencias inolvidables
+sobre dos ruedas.
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<i class="fa-solid fa-eye"></i>
+
+<h3>Visión</h3>
+
+<p>
+Convertirnos en una comunidad biker
+referente en Latinoamérica.
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+<h3>Valores</h3>
+
+<p>
+Respeto, lealtad,
+aventura y hermandad.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PILOTOS -->
+
+<section id="pilotos" class="section">
+
+<div class="section-title">
+<h2>Pilotos</h2>
+</div>
+
+<div class="members-grid">
+
+<div class="member-card">
+
+<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600" alt="Piloto">
+
+<div class="member-info">
+
+<h3>Carlos Rojas</h3>
+
+<h4>El Nómada</h4>
+
+<p>Harley Davidson</p>
+
+<p>120,000 km</p>
+
+<div class="socials">
+
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="member-card">
+
+<img src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?w=600" alt="Piloto">
+
+<div class="member-info">
+
+<h3>Marco Díaz</h3>
+
+<h4>Ghost Rider</h4>
+
+<p>Yamaha MT07</p>
+
+<p>88,000 km</p>
+
+<div class="socials">
+
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="member-card">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600" alt="Piloto">
+
+<div class="member-info">
+
+<h3>Luis Torres</h3>
+
+<h4>Wolf</h4>
+
+<p>Kawasaki Z900</p>
+
+<p>94,500 km</p>
+
+<div class="socials">
+
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COPILOTOS -->
+
+<section id="copilotos" class="section">
+
+<div class="section-title">
+<h2>Copilotos</h2>
+</div>
+
+<div class="members-grid">
+
+<div class="member-card">
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600">
+
+<div class="member-info">
+
+<h3>Ana</h3>
+
+<h4>Queen Road</h4>
+
+<p>Lima</p>
+
+<p>
+"Siempre hacia adelante."
+</p>
+
+</div>
+
+</div>
+
+<div class="member-card">
+
+<img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600">
+
+<div class="member-info">
+
+<h3>Valeria</h3>
+
+<h4>Storm Girl</h4>
+
+<p>Trujillo</p>
+
+<p>
+"Cada ruta tiene una historia."
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ESTADISTICAS -->
+
+<section class="stats-section">
+
+<div class="stat">
+
+<h2 class="counter" data-target="120">
+0
+</h2>
+
+<p>Miembros</p>
+
+</div>
+
+<div class="stat">
+
+<h2 class="counter" data-target="580000">
+0
+</h2>
+
+<p>Kilómetros</p>
+
+</div>
+
+<div class="stat">
+
+<h2 class="counter" data-target="45">
+0
+</h2>
+
+<p>Ciudades</p>
+
+</div>
+
+<div class="stat">
+
+<h2 class="counter" data-target="1200">
+0
+</h2>
+
+<p>Stickers</p>
+
+</div>
+
+<div class="stat">
+
+<h2 class="counter" data-target="80">
+0
+</h2>
+
+<p>Eventos</p>
+
+</div>
+
+</section>
+
+<!-- RUTAS -->
+
+<section id="rutas" class="section">
+
+<div class="section-title">
+<h2>Rutas Realizadas</h2>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>Lima - Paracas</h3>
+
+<span>250 KM</span>
+
+<p>25 Marzo 2025</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Huaraz Adventure</h3>
+
+<span>420 KM</span>
+
+<p>15 Mayo 2025</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Cusco Freedom Ride</h3>
+
+<span>780 KM</span>
+
+<p>10 Agosto 2025</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MAPA -->
+
+<section id="mapa" class="section">
+
+<div class="section-title">
+<h2>Mapa Biker</h2>
+</div>
+
+<div id="map"></div>
+
+</section>
+
+<!-- STICKERS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+FLOW EN CADA RINCÓN
+</h2>
+
+</div>
+
+<div class="sticker-wall">
+
+<div class="sticker-item">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
+
+<div class="sticker-info">
+
+<h3>Cusco</h3>
+
+<p>Junio 2025</p>
+
+</div>
+
+</div>
+
+<div class="sticker-item">
+
+<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600">
+
+<div class="sticker-info">
+
+<h3>Arequipa</h3>
+
+<p>Mayo 2025</p>
+
+</div>
+
+</div>
+
+<div class="sticker-item">
+
+<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600">
+
+<div class="sticker-info">
+
+<h3>Ica</h3>
+
+<p>Marzo 2025</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section id="galeria" class="section">
+
+<div class="section-title">
+<h2>Galería Premium</h2>
+</div>
+
+<div class="gallery-filter">
+
+<button class="filter active">Todos</button>
+<button class="filter">Viajes</button>
+<button class="filter">Eventos</button>
+<button class="filter">Motos</button>
+<button class="filter">Stickers</button>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600">
+<img src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?w=600">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
+<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600">
+
+</div>
+
+</section>
+
+<!-- EVENTOS -->
+
+<section id="eventos" class="section">
+
+<div class="section-title">
+
+<h2>Próximo Evento</h2>
+
+</div>
+
+<div class="event-card">
+
+<h3>Gran Ruta del Sur</h3>
+
+<p>Arequipa</p>
+
+<p>20 Agosto 2026</p>
+
+<div id="countdown"></div>
+
+</div>
+
+</section>
+
+<!-- TIENDA -->
+
+<section id="tienda" class="section">
+
+<div class="section-title">
+
+<h2>Tienda Oficial</h2>
+
+</div>
+
+<div class="shop-grid">
+
+<div class="shop-card">
+
+<h3>Polo Oficial</h3>
+<p>S/ 59</p>
+
+</div>
+
+<div class="shop-card">
+
+<h3>Casaca Premium</h3>
+<p>S/ 199</p>
+
+</div>
+
+<div class="shop-card">
+
+<h3>Sticker Club</h3>
+<p>S/ 10</p>
+
+</div>
+
+<div class="shop-card">
+
+<h3>Gorra Flow</h3>
+<p>S/ 45</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIOS -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Testimonios</h2>
+</div>
+
+<div class="testimonial-slider">
+
+<div class="testimonial active">
+
+<p>
+"Encontré una familia sobre dos ruedas."
+</p>
+
+<h4>Marco Díaz</h4>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+"Las mejores aventuras de mi vida."
+</p>
+
+<h4>Ana Torres</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FRASES -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Frase Biker</h2>
+
+</div>
+
+<div class="quote-box">
+
+<p id="bikerQuote">
+
+El camino no se mide en kilómetros,
+sino en historias.
+
+</p>
+
+<button id="newQuote">
+
+Nueva Frase
+
+</button>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto" class="section">
+
+<div class="section-title">
+<h2>Contacto</h2>
+</div>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Nombre">
+
+<input type="tel" placeholder="Teléfono">
+
+<input type="email" placeholder="Correo">
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button type="submit">
+
+Enviar
+
+</button>
+
+</form>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<a href="#" class="whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+
+🏍️ SPCF
+
+</div>
+
+<p>
+
+"Las mejores historias nunca empiezan con un plan...
+empiezan con una ruta."
+
+</p>
+
+<div class="footer-socials">
+
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-tiktok"></i>
+
+</div>
+
+</footer>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox">
+
+<img id="lightboxImg">
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
