@@ -4,28 +4,92 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SIN PLATA PERO CON FLOW | Club de Motociclistas</title>
+    <title>
+        SIN PLATA PERO CON FLOW | Club de Motociclistas de Trujillo Perú
+    </title>
 
     <meta name="description"
-        content="Club de motociclistas SIN PLATA PERO CON FLOW. Aventuras, rutas, hermandad y pasión por las motos.">
+        content="Club de motociclistas SIN PLATA PERO CON FLOW. Aventuras en carretera, rutas, eventos, hermandad biker, pasión por las motos y libertad sobre dos ruedas.">
+
+    <meta name="keywords" content="
+        club de motociclistas,
+        club biker peru,
+        motociclistas trujillo,
+        motos peru,
+        rutas en moto,
+        club motero,
+        motociclistas perú,
+        eventos biker,
+        harley davidson peru,
+        comunidad motera,
+        viajes en moto,
+        moto turismo peru,
+        sin plata pero con flow,
+        club spcf,
+        rutas biker perú,
+        club de motos trujillo">
+
+    <meta name="author" content="Club SIN PLATA PERO CON FLOW">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#071B3B">
+
+    <!-- Open Graph -->
+
+    <meta property="og:title" content="SIN PLATA PERO CON FLOW">
+
+    <meta property="og:description" content="No importa cuánto tengas. Importa cuánto disfrutas el camino.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://www.spcf.vercel.app">
+
+    <meta property="og:image" content="https://www.spcf.vercel.app/img/logo-spcf.png">
+
+    <!-- Twitter -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="SIN PLATA PERO CON FLOW">
+
+    <meta name="twitter:description" content="Hermandad, libertad, aventura y pasión por las motos.">
+
+    <meta name="twitter:image" content="https://www.spcf.vercel.app/img/logo-spcf.png">
+
+    <!-- Favicon -->
+
+    <link rel="icon" type="image/png" href="img/logospcf.png">
+
+    <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Font Awesome -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Leaflet -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-<div id="scroll-progress"></div>
+    <div id="scroll-progress"></div>
     <!-- LOADER -->
 
     <div id="loader">
@@ -73,48 +137,46 @@
 
     <!-- HERO -->
 
-   <header id="inicio" class="hero">
+    <header id="inicio" class="hero">
 
-    <div class="hero-overlay"></div>
+        <div class="hero-overlay"></div>
 
-    <video autoplay muted loop playsinline>
-        <source src="video/spcf.mp4" type="video/mp4">
-    </video>
+        <video autoplay muted loop playsinline>
+            <source src="video/spcf.mp4" type="video/mp4">
+        </video>
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <div class="logo-container">
+            <div class="logo-container">
 
-            <div class="smoke smoke1"></div>
-            <div class="smoke smoke2"></div>
-            <div class="smoke smoke3"></div>
+                <div class="smoke smoke1"></div>
+                <div class="smoke smoke2"></div>
+                <div class="smoke smoke3"></div>
 
-            <div class="hero-logo">
+                <div class="hero-logo">
 
-                <img
-                    src="img/logospcf.png"
-                    alt="SIN PLATA PERO CON FLOW">
+                    <img src="img/logospcf.png" alt="SIN PLATA PERO CON FLOW">
+
+                </div>
 
             </div>
 
+            <p class="hero-slogan">
+
+                No importa cuánto tengas.
+                Importa cuánto disfrutas el camino.
+
+            </p>
+
+            <a href="#contacto" class="btn-hero">
+
+                ÚNETE A LA RUTA
+
+            </a>
+
         </div>
 
-        <p class="hero-slogan">
-
-            No importa cuánto tengas.
-            Importa cuánto disfrutas el camino.
-
-        </p>
-
-        <a href="#contacto" class="btn-hero">
-
-            ÚNETE A LA RUTA
-
-        </a>
-
-    </div>
-
-</header>
+    </header>
 
     <!-- NOSOTROS -->
 
@@ -510,44 +572,44 @@
 
             <div class="gallery-filter">
 
-    <button class="filter active" data-filter="all">
-        Todos
-    </button>
+                <button class="filter active" data-filter="all">
+                    Todos
+                </button>
 
-    <button class="filter" data-filter="viajes">
-        Viajes
-    </button>
+                <button class="filter" data-filter="viajes">
+                    Viajes
+                </button>
 
-    <button class="filter" data-filter="eventos">
-        Eventos
-    </button>
+                <button class="filter" data-filter="eventos">
+                    Eventos
+                </button>
 
-    <button class="filter" data-filter="motos">
-        Motos
-    </button>
+                <button class="filter" data-filter="motos">
+                    Motos
+                </button>
 
-    <button class="filter" data-filter="stickers">
-        Stickers
-    </button>
+                <button class="filter" data-filter="stickers">
+                    Stickers
+                </button>
 
-</div>
+            </div>
         </div>
 
-       <div class="gallery-grid">
+        <div class="gallery-grid">
 
-    <img src="img/fotos/evento-futbol.png" data-category="viajes">
+            <img src="img/fotos/evento-futbol.png" data-category="viajes">
 
-    <img src="img/fotos/viaje-simbal.png" data-category="eventos">
+            <img src="img/fotos/viaje-simbal.png" data-category="eventos">
 
-    <img src="img/fotos/evento-futbol.png" data-category="motos">
+            <img src="img/fotos/evento-futbol.png" data-category="motos">
 
-    <img src="img/fotos/viaje-simbal.png" data-category="stickers">
+            <img src="img/fotos/viaje-simbal.png" data-category="stickers">
 
-    <img src="img/fotos/evento-futbol.png" data-category="viajes">
+            <img src="img/fotos/evento-futbol.png" data-category="viajes">
 
-    <img src="img/fotos/viaje-simbal.png" data-category="eventos">
+            <img src="img/fotos/viaje-simbal.png" data-category="eventos">
 
-</div>
+        </div>
 
     </section>
 
@@ -601,7 +663,7 @@
 
             </div>
 
-           
+
 
             <div class="shop-card">
 
@@ -715,39 +777,37 @@
 
     <!-- FOOTER -->
 
-<footer>
+    <footer>
 
-    <div class="footer-logo">
+        <div class="footer-logo">
 
-        <img
-            src="img/logospcf.png"
-            alt="Club Sin Plata Pero Con Flow">
+            <img src="img/logospcf.png" alt="Club Sin Plata Pero Con Flow">
 
-    </div>
+        </div>
 
-    <p>
+        <p>
 
-        "Las mejores historias nunca empiezan con un plan...
-        empiezan con una ruta."
+            "Las mejores historias nunca empiezan con un plan...
+            empiezan con una ruta."
 
-    </p>
+        </p>
 
-    <div class="footer-socials">
+        <div class="footer-socials">
 
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-tiktok"></i>
-        <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-whatsapp"></i>
 
-    </div>
-    <br>
-    <p class="copyright">
+        </div>
+        <br>
+        <p class="copyright">
 
-        © 2026 Club Sin Plata Pero Con Flow - Trujillo, Perú
+            © 2026 Club Sin Plata Pero Con Flow - Trujillo, Perú
 
-    </p>
+        </p>
 
-</footer>
+    </footer>
 
     <!-- LIGHTBOX -->
 
