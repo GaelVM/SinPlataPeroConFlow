@@ -147,52 +147,20 @@ L.tileLayer(
 const bikerLocations = [
 
 {
-city:"Lima",
-coords:[-12.0464,-77.0428],
-date:"12 Marzo 2025",
-participants:"18",
-sticker:"Sticker Dorado"
+city:"Simbal - Catarata",
+coords:[-7.9670885,-78.7816098],
+date:"13 Junio 2026",
+participants:"7",
+sticker:"Sticker Pegado"
 },
 
 {
-city:"Huaraz",
-coords:[-9.5278,-77.5278],
-date:"25 Abril 2025",
+city:"Simbal - Mirador",
+coords:[-7.9760334,-78.8112323,21],
+date:"13 Junior 2026",
 participants:"15",
-sticker:"Sticker Montaña"
+sticker:"Sticker Pegado"
 },
-
-{
-city:"Paracas",
-coords:[-13.8333,-76.2667],
-date:"10 Mayo 2025",
-participants:"20",
-sticker:"Sticker Ruta"
-},
-
-{
-city:"Ica",
-coords:[-14.0678,-75.7286],
-date:"18 Junio 2025",
-participants:"17",
-sticker:"Sticker Flow"
-},
-
-{
-city:"Cusco",
-coords:[-13.5319,-71.9675],
-date:"20 Agosto 2025",
-participants:"22",
-sticker:"Sticker Imperial"
-},
-
-{
-city:"Arequipa",
-coords:[-16.4090,-71.5375],
-date:"10 Octubre 2025",
-participants:"19",
-sticker:"Sticker Volcán"
-}
 
 ];
 
