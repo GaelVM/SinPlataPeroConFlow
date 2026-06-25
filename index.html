@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SIN PLATA PERO CON FLOW</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #050505, #081426);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 55px;
+      color: #D4AF37;
+      text-shadow: 0 0 20px #D4AF37;
+      margin: 0;
+    }
+
+    p {
+      margin-top: 20px;
+      color: #ccc;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      margin: 5px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-gold {
+      background: #D4AF37;
+      color: black;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+
+    /* SECCIONES */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      display: inline-block;
+      width: 250px;
+    }
+
+    /* ANIMACIÓN SCROLL */
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="overlay"></div>
+
+    <div class="content">
+      <h1>SIN PLATA<br>PERO CON FLOW</h1>
+
+      <p>
+        No medimos la riqueza por el dinero.<br>
+        La medimos por rutas, historias y hermandad.
+      </p>
+
+      <div class="buttons">
+        <button class="btn btn-gold">ÚNETE</button>
+        <button class="btn btn-outline">EXPLORAR</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- STATS -->
+  <section>
+    <h2 class="fade">Nuestra Hermandad</h2>
+
+    <div class="card fade">
+      <h3>150+</h3>
+      <p>Miembros</p>
+    </div>
+
+    <div class="card fade">
+      <h3>80,000</h3>
+      <p>Kilómetros</p>
+    </div>
+
+    <div class="card fade">
+      <h3>35</h3>
+      <p>Eventos</p>
+    </div>
+  </section>
+
+
+  <!-- FRASE -->
+  <section>
+    <h2 id="frase"></h2>
+  </section>
+
+  <script>
+    // FRASES DINÁMICAS
+    const frases = [
+      "El camino no pregunta cuánto tienes.",
+      "Sin plata, pero con flow.",
+      "Rodamos juntos, llegamos juntos."
+    ];
+
+    document.getElementById("frase").innerText =
+      frases[Math.floor(Math.random() * frases.length)];
+
+    // ANIMACIÓN SCROLL
+    const elementos = document.querySelectorAll(".fade");
+
+    function mostrar() {
+      elementos.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add("show");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", mostrar);
+    mostrar();
+  </script>
+
+</body>
+</html>
