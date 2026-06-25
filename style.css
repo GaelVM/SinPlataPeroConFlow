@@ -1200,46 +1200,23 @@ footer{
     left:0;
 
     width:0%;
-    height:5px;
+    height:4px;
 
     z-index:99999;
 
     background:
     linear-gradient(
         90deg,
-        #071B3B,
         #D4AF37,
-        #FFD700,
+        #FFE28A,
         #D4AF37
     );
 
     box-shadow:
-        0 0 10px #D4AF37,
-        0 0 20px #D4AF37,
-        0 0 40px #D4AF37,
-        0 0 60px rgba(212,175,55,.7);
+        0 0 10px rgba(212,175,55,.8),
+        0 0 20px rgba(212,175,55,.6),
+        0 0 40px rgba(212,175,55,.4);
 
-}
-
-#scroll-progress::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:-10px;
-    top:-4px;
-
-    width:14px;
-    height:14px;
-
-    border-radius:50%;
-
-    background:#FFD700;
-
-    box-shadow:
-        0 0 10px #FFD700,
-        0 0 20px #FFD700,
-        0 0 40px #FFD700;
+    transition:width .1s linear;
 
 }
