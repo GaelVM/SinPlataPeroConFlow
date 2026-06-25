@@ -1187,3 +1187,36 @@ footer{
     font-size:.9rem;
 
 }
+
+/* =====================
+   SCROLL PROGRESS
+===================== */
+
+#scroll-progress{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:0%;
+    height:4px;
+
+    z-index:99999;
+
+    background:
+    linear-gradient(
+        90deg,
+        #D4AF37,
+        #FFE28A,
+        #D4AF37
+    );
+
+    box-shadow:
+        0 0 10px rgba(212,175,55,.8),
+        0 0 20px rgba(212,175,55,.6),
+        0 0 40px rgba(212,175,55,.4);
+
+    transition:width .1s linear;
+
+}
