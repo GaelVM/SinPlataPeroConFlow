@@ -1,735 +1,735 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SIN PLATA PERO CON FLOW | Club de Motociclistas</title>
+    <title>SIN PLATA PERO CON FLOW | Club de Motociclistas</title>
 
-<meta name="description" content="Club de motociclistas SIN PLATA PERO CON FLOW. Aventuras, rutas, hermandad y pasión por las motos.">
+    <meta name="description"
+        content="Club de motociclistas SIN PLATA PERO CON FLOW. Aventuras, rutas, hermandad y pasión por las motos.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link
-rel="stylesheet"
-href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- LOADER -->
+    <!-- LOADER -->
 
-<div id="loader">
+    <div id="loader">
 
-<div class="loader-logo">
-SPCF
-</div>
+        <div class="loader-logo">
+            SPCF
+        </div>
 
-<div class="loader-line"></div>
+        <div class="loader-line"></div>
 
-</div>
+    </div>
 
-<!-- PARTICLES -->
+    <!-- PARTICLES -->
 
-<div id="particles"></div>
+    <div id="particles"></div>
 
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
 
-<nav id="navbar">
+    <nav id="navbar">
 
-<div class="logo">
-SIN PLATA <span>PERO CON FLOW</span>
-</div>
+        <div class="logo">
+            SIN PLATA <span>PERO CON FLOW</span>
+        </div>
 
-<ul>
+        <ul>
 
-<li><a href="#inicio">Inicio</a></li>
-<li><a href="#nosotros">Nosotros</a></li>
-<li><a href="#pilotos">Pilotos</a></li>
-<li><a href="#copilotos">Copilotos</a></li>
-<li><a href="#rutas">Rutas</a></li>
-<li><a href="#mapa">Mapa Biker</a></li>
-<li><a href="#galeria">Galería</a></li>
-<li><a href="#eventos">Eventos</a></li>
-<li><a href="#tienda">Tienda</a></li>
-<li><a href="#contacto">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#pilotos">Pilotos</a></li>
+            <li><a href="#copilotos">Copilotos</a></li>
+            <li><a href="#rutas">Rutas</a></li>
+            <li><a href="#mapa">Mapa Biker</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#tienda">Tienda</a></li>
+            <li><a href="#contacto">Contacto</a></li>
 
-</ul>
+        </ul>
 
-<div class="menu-mobile">
-<i class="fa-solid fa-bars"></i>
-</div>
+        <div class="menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-</nav>
+    </nav>
 
-<!-- HERO -->
+    <!-- HERO -->
 
-<header id="inicio" class="hero">
+    <header id="inicio" class="hero">
 
-<div class="hero-overlay"></div>
+        <div class="hero-overlay"></div>
 
-<video autoplay muted loop playsinline>
+        <video autoplay muted loop playsinline>
 
-<source src="https://cdn.coverr.co/videos/coverr-motorcycle-rider-1561552637364?download=1080p" type="video/mp4">
+            <source src="https://pixabay.com/es/videos/download/video-211188_medium.mp4"
+                type="video/mp4">
 
-</video>
+        </video>
 
-<div class="hero-content">
+        <div class="hero-content">
 
-<div class="hero-logo">
+            <div class="hero-logo">
+                <img src="img/logospcf.png" alt="Logo SIN PLATA PERO CON FLOW">
+            </div>
 
-🏍️
+            <h1>
+                SIN PLATA
+                <span>PERO CON FLOW</span>
+            </h1>
 
-</div>
+            <p>
+                "No importa cuánto tengas.
+                Importa cuánto disfrutas el camino."
+            </p>
 
-<h1>
-SIN PLATA
-<span>PERO CON FLOW</span>
-</h1>
+            <a href="#contacto" class="btn-hero">
 
-<p>
-"No importa cuánto tengas.
-Importa cuánto disfrutas el camino."
-</p>
+                ÚNETE A LA RUTA
 
-<a href="#contacto" class="btn-hero">
+            </a>
 
-ÚNETE A LA RUTA
+        </div>
 
-</a>
+        <div class="speed-lines"></div>
 
-</div>
+    </header>
 
-<div class="speed-lines"></div>
+    <!-- NOSOTROS -->
 
-</header>
+    <section id="nosotros" class="section">
 
-<!-- NOSOTROS -->
+        <div class="section-title">
+            <h2>Nuestra Hermandad</h2>
+        </div>
 
-<section id="nosotros" class="section">
+        <div class="about-grid">
 
-<div class="section-title">
-<h2>Nuestra Hermandad</h2>
-</div>
+            <div class="glass-card">
 
-<div class="about-grid">
+                <i class="fa-solid fa-road"></i>
 
-<div class="glass-card">
+                <h3>Historia</h3>
 
-<i class="fa-solid fa-road"></i>
+                <p>
+                    Nacimos con una sola misión:
+                    demostrar que las mejores aventuras
+                    no dependen del dinero sino de la pasión.
+                </p>
 
-<h3>Historia</h3>
+            </div>
 
-<p>
-Nacimos con una sola misión:
-demostrar que las mejores aventuras
-no dependen del dinero sino de la pasión.
-</p>
+            <div class="glass-card">
 
-</div>
+                <i class="fa-solid fa-bullseye"></i>
 
-<div class="glass-card">
+                <h3>Misión</h3>
 
-<i class="fa-solid fa-bullseye"></i>
+                <p>
+                    Crear experiencias inolvidables
+                    sobre dos ruedas.
+                </p>
 
-<h3>Misión</h3>
+            </div>
 
-<p>
-Crear experiencias inolvidables
-sobre dos ruedas.
-</p>
+            <div class="glass-card">
 
-</div>
+                <i class="fa-solid fa-eye"></i>
 
-<div class="glass-card">
+                <h3>Visión</h3>
 
-<i class="fa-solid fa-eye"></i>
+                <p>
+                    Convertirnos en una comunidad biker
+                    referente en Latinoamérica.
+                </p>
 
-<h3>Visión</h3>
+            </div>
 
-<p>
-Convertirnos en una comunidad biker
-referente en Latinoamérica.
-</p>
+            <div class="glass-card">
 
-</div>
+                <i class="fa-solid fa-shield-heart"></i>
 
-<div class="glass-card">
+                <h3>Valores</h3>
 
-<i class="fa-solid fa-shield-heart"></i>
+                <p>
+                    Respeto, lealtad,
+                    aventura y hermandad.
+                </p>
 
-<h3>Valores</h3>
+            </div>
 
-<p>
-Respeto, lealtad,
-aventura y hermandad.
-</p>
+        </div>
 
-</div>
+    </section>
 
-</div>
+    <!-- PILOTOS -->
 
-</section>
+    <section id="pilotos" class="section">
 
-<!-- PILOTOS -->
+        <div class="section-title">
+            <h2>Pilotos</h2>
+        </div>
 
-<section id="pilotos" class="section">
+        <div class="members-grid">
 
-<div class="section-title">
-<h2>Pilotos</h2>
-</div>
+            <div class="member-card">
 
-<div class="members-grid">
+                <img src="img/pilotos/camionero.png" alt="Piloto">
 
-<div class="member-card">
+                <div class="member-info">
 
-<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600" alt="Piloto">
+                    <h3>Lo Llamaremos Pedro</h3>
 
-<div class="member-info">
+                    <h4>El Camionero</h4>
 
-<h3>Carlos Rojas</h3>
+                    <p>Harley Davidson</p>
 
-<h4>El Nómada</h4>
+                    <p>0000001 km</p>
 
-<p>Harley Davidson</p>
+                    <div class="socials">
 
-<p>120,000 km</p>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
 
-<div class="socials">
+                    </div>
 
-<i class="fab fa-facebook"></i>
-<i class="fab fa-instagram"></i>
+                </div>
 
-</div>
+            </div>
 
-</div>
+            <div class="member-card">
 
-</div>
+                <img src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?w=600" alt="Piloto">
 
-<div class="member-card">
+                <div class="member-info">
 
-<img src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?w=600" alt="Piloto">
+                    <h3>Marco Díaz</h3>
 
-<div class="member-info">
+                    <h4>Ghost Rider</h4>
 
-<h3>Marco Díaz</h3>
+                    <p>Yamaha MT07</p>
 
-<h4>Ghost Rider</h4>
+                    <p>88,000 km</p>
 
-<p>Yamaha MT07</p>
+                    <div class="socials">
 
-<p>88,000 km</p>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
 
-<div class="socials">
+                    </div>
 
-<i class="fab fa-facebook"></i>
-<i class="fab fa-instagram"></i>
+                </div>
 
-</div>
+            </div>
 
-</div>
+            <div class="member-card">
 
-</div>
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600" alt="Piloto">
 
-<div class="member-card">
+                <div class="member-info">
 
-<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600" alt="Piloto">
+                    <h3>Luis Torres</h3>
 
-<div class="member-info">
+                    <h4>Wolf</h4>
 
-<h3>Luis Torres</h3>
+                    <p>Kawasaki Z900</p>
 
-<h4>Wolf</h4>
+                    <p>94,500 km</p>
 
-<p>Kawasaki Z900</p>
+                    <div class="socials">
 
-<p>94,500 km</p>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
 
-<div class="socials">
+                    </div>
 
-<i class="fab fa-facebook"></i>
-<i class="fab fa-instagram"></i>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-</div>
+    <!-- COPILOTOS -->
 
-</section>
+    <section id="copilotos" class="section">
 
-<!-- COPILOTOS -->
+        <div class="section-title">
+            <h2>Copilotos</h2>
+        </div>
 
-<section id="copilotos" class="section">
+        <div class="members-grid">
 
-<div class="section-title">
-<h2>Copilotos</h2>
-</div>
+            <div class="member-card">
 
-<div class="members-grid">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600">
 
-<div class="member-card">
+                <div class="member-info">
 
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600">
+                    <h3>Ana</h3>
 
-<div class="member-info">
+                    <h4>Queen Road</h4>
 
-<h3>Ana</h3>
+                    <p>Lima</p>
 
-<h4>Queen Road</h4>
+                    <p>
+                        "Siempre hacia adelante."
+                    </p>
 
-<p>Lima</p>
+                </div>
 
-<p>
-"Siempre hacia adelante."
-</p>
+            </div>
 
-</div>
+            <div class="member-card">
 
-</div>
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600">
 
-<div class="member-card">
+                <div class="member-info">
 
-<img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600">
+                    <h3>Valeria</h3>
 
-<div class="member-info">
+                    <h4>Storm Girl</h4>
 
-<h3>Valeria</h3>
+                    <p>Trujillo</p>
 
-<h4>Storm Girl</h4>
+                    <p>
+                        "Cada ruta tiene una historia."
+                    </p>
 
-<p>Trujillo</p>
+                </div>
 
-<p>
-"Cada ruta tiene una historia."
-</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-</div>
+    <!-- ESTADISTICAS -->
 
-</section>
+    <section class="stats-section">
 
-<!-- ESTADISTICAS -->
+        <div class="stat">
 
-<section class="stats-section">
+            <h2 class="counter" data-target="120">
+                0
+            </h2>
 
-<div class="stat">
+            <p>Miembros</p>
 
-<h2 class="counter" data-target="120">
-0
-</h2>
+        </div>
 
-<p>Miembros</p>
+        <div class="stat">
 
-</div>
+            <h2 class="counter" data-target="580000">
+                0
+            </h2>
 
-<div class="stat">
+            <p>Kilómetros</p>
 
-<h2 class="counter" data-target="580000">
-0
-</h2>
+        </div>
 
-<p>Kilómetros</p>
+        <div class="stat">
 
-</div>
+            <h2 class="counter" data-target="45">
+                0
+            </h2>
 
-<div class="stat">
+            <p>Ciudades</p>
 
-<h2 class="counter" data-target="45">
-0
-</h2>
+        </div>
 
-<p>Ciudades</p>
+        <div class="stat">
 
-</div>
+            <h2 class="counter" data-target="1200">
+                0
+            </h2>
 
-<div class="stat">
+            <p>Stickers</p>
 
-<h2 class="counter" data-target="1200">
-0
-</h2>
+        </div>
 
-<p>Stickers</p>
+        <div class="stat">
 
-</div>
+            <h2 class="counter" data-target="80">
+                0
+            </h2>
 
-<div class="stat">
+            <p>Eventos</p>
 
-<h2 class="counter" data-target="80">
-0
-</h2>
+        </div>
 
-<p>Eventos</p>
+    </section>
 
-</div>
+    <!-- RUTAS -->
 
-</section>
+    <section id="rutas" class="section">
 
-<!-- RUTAS -->
+        <div class="section-title">
+            <h2>Rutas Realizadas</h2>
+        </div>
 
-<section id="rutas" class="section">
+        <div class="timeline">
 
-<div class="section-title">
-<h2>Rutas Realizadas</h2>
-</div>
+            <div class="timeline-item">
 
-<div class="timeline">
+                <h3>Lima - Paracas</h3>
 
-<div class="timeline-item">
+                <span>250 KM</span>
 
-<h3>Lima - Paracas</h3>
+                <p>25 Marzo 2025</p>
 
-<span>250 KM</span>
+            </div>
 
-<p>25 Marzo 2025</p>
+            <div class="timeline-item">
 
-</div>
+                <h3>Huaraz Adventure</h3>
 
-<div class="timeline-item">
+                <span>420 KM</span>
 
-<h3>Huaraz Adventure</h3>
+                <p>15 Mayo 2025</p>
 
-<span>420 KM</span>
+            </div>
 
-<p>15 Mayo 2025</p>
+            <div class="timeline-item">
 
-</div>
+                <h3>Cusco Freedom Ride</h3>
 
-<div class="timeline-item">
+                <span>780 KM</span>
 
-<h3>Cusco Freedom Ride</h3>
+                <p>10 Agosto 2025</p>
 
-<span>780 KM</span>
+            </div>
 
-<p>10 Agosto 2025</p>
+        </div>
 
-</div>
+    </section>
 
-</div>
+    <!-- MAPA -->
 
-</section>
+    <section id="mapa" class="section">
 
-<!-- MAPA -->
+        <div class="section-title">
+            <h2>Mapa Biker</h2>
+        </div>
 
-<section id="mapa" class="section">
+        <div id="map"></div>
 
-<div class="section-title">
-<h2>Mapa Biker</h2>
-</div>
+    </section>
 
-<div id="map"></div>
+    <!-- STICKERS -->
 
-</section>
+    <section class="section">
 
-<!-- STICKERS -->
+        <div class="section-title">
 
-<section class="section">
+            <h2>
+                FLOW EN CADA RINCÓN
+            </h2>
 
-<div class="section-title">
+        </div>
 
-<h2>
-FLOW EN CADA RINCÓN
-</h2>
+        <div class="sticker-wall">
 
-</div>
+            <div class="sticker-item">
 
-<div class="sticker-wall">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
 
-<div class="sticker-item">
+                <div class="sticker-info">
 
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
+                    <h3>Cusco</h3>
 
-<div class="sticker-info">
+                    <p>Junio 2025</p>
 
-<h3>Cusco</h3>
+                </div>
 
-<p>Junio 2025</p>
+            </div>
 
-</div>
+            <div class="sticker-item">
 
-</div>
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600">
 
-<div class="sticker-item">
+                <div class="sticker-info">
 
-<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600">
+                    <h3>Arequipa</h3>
 
-<div class="sticker-info">
+                    <p>Mayo 2025</p>
 
-<h3>Arequipa</h3>
+                </div>
 
-<p>Mayo 2025</p>
+            </div>
 
-</div>
+            <div class="sticker-item">
 
-</div>
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600">
 
-<div class="sticker-item">
+                <div class="sticker-info">
 
-<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600">
+                    <h3>Ica</h3>
 
-<div class="sticker-info">
+                    <p>Marzo 2025</p>
 
-<h3>Ica</h3>
+                </div>
 
-<p>Marzo 2025</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-</div>
+    <!-- GALERIA -->
 
-</section>
+    <section id="galeria" class="section">
 
-<!-- GALERIA -->
+        <div class="section-title">
+            <h2>Galería Premium</h2>
+        </div>
 
-<section id="galeria" class="section">
+        <div class="gallery-filter">
 
-<div class="section-title">
-<h2>Galería Premium</h2>
-</div>
+            <button class="filter active">Todos</button>
+            <button class="filter">Viajes</button>
+            <button class="filter">Eventos</button>
+            <button class="filter">Motos</button>
+            <button class="filter">Stickers</button>
 
-<div class="gallery-filter">
+        </div>
 
-<button class="filter active">Todos</button>
-<button class="filter">Viajes</button>
-<button class="filter">Eventos</button>
-<button class="filter">Motos</button>
-<button class="filter">Stickers</button>
+        <div class="gallery-grid">
 
-</div>
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600">
+            <img src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?w=600">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600">
 
-<div class="gallery-grid">
+        </div>
 
-<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600">
-<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600">
-<img src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?w=600">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
-<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600">
+    </section>
 
-</div>
+    <!-- EVENTOS -->
 
-</section>
+    <section id="eventos" class="section">
 
-<!-- EVENTOS -->
+        <div class="section-title">
 
-<section id="eventos" class="section">
+            <h2>Próximo Evento</h2>
 
-<div class="section-title">
+        </div>
 
-<h2>Próximo Evento</h2>
+        <div class="event-card">
 
-</div>
+            <h3>Gran Ruta del Sur</h3>
 
-<div class="event-card">
+            <p>Arequipa</p>
 
-<h3>Gran Ruta del Sur</h3>
+            <p>20 Agosto 2026</p>
 
-<p>Arequipa</p>
+            <div id="countdown"></div>
 
-<p>20 Agosto 2026</p>
+        </div>
 
-<div id="countdown"></div>
+    </section>
 
-</div>
+    <!-- TIENDA -->
 
-</section>
+    <section id="tienda" class="section">
 
-<!-- TIENDA -->
+        <div class="section-title">
 
-<section id="tienda" class="section">
+            <h2>Tienda Oficial</h2>
 
-<div class="section-title">
+        </div>
 
-<h2>Tienda Oficial</h2>
+        <div class="shop-grid">
 
-</div>
+            <div class="shop-card">
 
-<div class="shop-grid">
+                <h3>Polo Oficial</h3>
+                <p>S/ 59</p>
 
-<div class="shop-card">
+            </div>
 
-<h3>Polo Oficial</h3>
-<p>S/ 59</p>
+            <div class="shop-card">
 
-</div>
+                <h3>Casaca Premium</h3>
+                <p>S/ 199</p>
 
-<div class="shop-card">
+            </div>
 
-<h3>Casaca Premium</h3>
-<p>S/ 199</p>
+            <div class="shop-card">
 
-</div>
+                <h3>Sticker Club</h3>
+                <p>S/ 10</p>
 
-<div class="shop-card">
+            </div>
 
-<h3>Sticker Club</h3>
-<p>S/ 10</p>
+            <div class="shop-card">
 
-</div>
+                <h3>Gorra Flow</h3>
+                <p>S/ 45</p>
 
-<div class="shop-card">
+            </div>
 
-<h3>Gorra Flow</h3>
-<p>S/ 45</p>
+        </div>
 
-</div>
+    </section>
 
-</div>
+    <!-- TESTIMONIOS -->
 
-</section>
+    <section class="section">
 
-<!-- TESTIMONIOS -->
+        <div class="section-title">
+            <h2>Testimonios</h2>
+        </div>
 
-<section class="section">
+        <div class="testimonial-slider">
 
-<div class="section-title">
-<h2>Testimonios</h2>
-</div>
+            <div class="testimonial active">
 
-<div class="testimonial-slider">
+                <p>
+                    "Encontré una familia sobre dos ruedas."
+                </p>
 
-<div class="testimonial active">
+                <h4>Marco Díaz</h4>
 
-<p>
-"Encontré una familia sobre dos ruedas."
-</p>
+            </div>
 
-<h4>Marco Díaz</h4>
+            <div class="testimonial">
 
-</div>
+                <p>
+                    "Las mejores aventuras de mi vida."
+                </p>
 
-<div class="testimonial">
+                <h4>Ana Torres</h4>
 
-<p>
-"Las mejores aventuras de mi vida."
-</p>
+            </div>
 
-<h4>Ana Torres</h4>
+        </div>
 
-</div>
+    </section>
 
-</div>
+    <!-- FRASES -->
 
-</section>
+    <section class="section">
 
-<!-- FRASES -->
+        <div class="section-title">
 
-<section class="section">
+            <h2>Frase Biker</h2>
 
-<div class="section-title">
+        </div>
 
-<h2>Frase Biker</h2>
+        <div class="quote-box">
 
-</div>
+            <p id="bikerQuote">
 
-<div class="quote-box">
+                El camino no se mide en kilómetros,
+                sino en historias.
 
-<p id="bikerQuote">
+            </p>
 
-El camino no se mide en kilómetros,
-sino en historias.
+            <button id="newQuote">
 
-</p>
+                Nueva Frase
 
-<button id="newQuote">
+            </button>
 
-Nueva Frase
+        </div>
 
-</button>
+    </section>
 
-</div>
+    <!-- CONTACTO -->
 
-</section>
+    <section id="contacto" class="section">
 
-<!-- CONTACTO -->
+        <div class="section-title">
+            <h2>Contacto</h2>
+        </div>
 
-<section id="contacto" class="section">
+        <form class="contact-form">
 
-<div class="section-title">
-<h2>Contacto</h2>
-</div>
+            <input type="text" placeholder="Nombre">
 
-<form class="contact-form">
+            <input type="tel" placeholder="Teléfono">
 
-<input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo">
 
-<input type="tel" placeholder="Teléfono">
+            <textarea placeholder="Mensaje"></textarea>
 
-<input type="email" placeholder="Correo">
+            <button type="submit">
 
-<textarea placeholder="Mensaje"></textarea>
+                Enviar
 
-<button type="submit">
+            </button>
 
-Enviar
+        </form>
 
-</button>
+    </section>
 
-</form>
+    <!-- WHATSAPP -->
 
-</section>
+    <a href="#" class="whatsapp">
 
-<!-- WHATSAPP -->
+        <i class="fab fa-whatsapp"></i>
 
-<a href="#" class="whatsapp">
+    </a>
 
-<i class="fab fa-whatsapp"></i>
+    <!-- FOOTER -->
 
-</a>
+    <footer>
 
-<!-- FOOTER -->
+        <div class="footer-logo">
 
-<footer>
+            🏍️ SPCF
 
-<div class="footer-logo">
+        </div>
 
-🏍️ SPCF
+        <p>
 
-</div>
+            "Las mejores historias nunca empiezan con un plan...
+            empiezan con una ruta."
 
-<p>
+        </p>
 
-"Las mejores historias nunca empiezan con un plan...
-empiezan con una ruta."
+        <div class="footer-socials">
 
-</p>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
 
-<div class="footer-socials">
+        </div>
 
-<i class="fab fa-facebook"></i>
-<i class="fab fa-instagram"></i>
-<i class="fab fa-tiktok"></i>
+    </footer>
 
-</div>
+    <!-- LIGHTBOX -->
 
-</footer>
+    <div id="lightbox">
 
-<!-- LIGHTBOX -->
+        <img id="lightboxImg">
 
-<div id="lightbox">
+    </div>
 
-<img id="lightboxImg">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-</div>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
