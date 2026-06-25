@@ -544,3 +544,67 @@ card.style.background =
 console.log(
 "🏍️ SIN PLATA PERO CON FLOW - PREMIUM EXPERIENCE LOADED"
 );
+
+/* ==========================
+   GALLERY FILTER
+========================== */
+
+const filterButtons =
+document.querySelectorAll(".filter");
+
+const galleryItems =
+document.querySelectorAll(".gallery-grid img");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        const filter =
+            button.dataset.filter;
+
+        galleryItems.forEach(item => {
+
+            const category =
+                item.dataset.category;
+
+            if (
+                filter === "all" ||
+                category === filter
+            ) {
+
+                item.style.display = "block";
+
+                setTimeout(() => {
+
+                    item.style.opacity = "1";
+                    item.style.transform =
+                        "scale(1)";
+
+                }, 50);
+
+            } else {
+
+                item.style.opacity = "0";
+                item.style.transform =
+                    "scale(.8)";
+
+                setTimeout(() => {
+
+                    item.style.display =
+                        "none";
+
+                }, 300);
+
+            }
+
+        });
+
+    });
+
+});
